@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #F3F4F6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vtys_java23.LoginController">
+    <VBox alignment="CENTER" prefHeight="300" prefWidth="400" spacing="15" style="-fx-background-color: linear-gradient(to bottom, #4facfe, #00f2fe); -fx-padding: 20; -fx-border-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 0);">
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #FFFFFF;" text="Giriş Yap" />
+
+        <TextField fx:id="txtEmail" promptText="E-posta" style="-fx-font-size: 14px; -fx-background-color: #F9FAFB; -fx-border-color: #D1D5DB; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 10;" />
+
+        <PasswordField fx:id="txtPassword" promptText="Şifre" style="-fx-font-size: 14px; -fx-background-color: #F9FAFB; -fx-border-color: #D1D5DB; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 10;" />
+
+        <Button onAction="#handleLogin" prefHeight="11.0" prefWidth="111.0" style=" -fx-background-color: #3B82F6; -fx-text-fill: #FFFFFF; -fx-padding: 10 20; -fx-background-radius: 5; -fx-border-radius: 5;" text="Giriş Yap">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <Button fx:id="exit" layoutX="163.0" layoutY="220.0" onAction="#handleExit" style="-fx-background-color: #EF4444; -fx-text-fill: #FFFFFF; -fx-padding: 10 20; -fx-background-radius: 5; -fx-border-radius: 5;" text="Çıkış">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+    </VBox>
+</AnchorPane>

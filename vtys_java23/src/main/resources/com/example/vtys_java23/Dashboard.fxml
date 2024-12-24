@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="760.0" prefWidth="1500.0" style="-fx-background-color: linear-gradient(to bottom, #4facfe, #00f2fe)" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vtys_java23.DashboardController">
+    <!-- İlan Tablosu -->
+    <TableView fx:id="ilanTable" layoutX="50.0" layoutY="172.0" prefHeight="505.0" prefWidth="798.0" style="-fx-background-color: #FFFFFF; -fx-border-radius: 10; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 15, 0, 0, 0); -fx-font-family: 'Roboto'; -fx-font-size: 14;">
+        <columns>
+            <TableColumn fx:id="colBaslik" prefWidth="119.99999618530273" style=" -fx-font-size: 16; -fx-text-fill: #333333;" text="Başlık" />
+            <TableColumn fx:id="colAciklama" prefWidth="243.99998474121094" style=" -fx-font-size: 16; -fx-text-fill: #333333;" text="Açıklama" />
+            <TableColumn fx:id="colUrunDurumu" prefWidth="107.20001220703125" style=" -fx-font-size: 16; -fx-text-fill: #333333;" text="Ürün Durumu" />
+            <TableColumn fx:id="colIlanTarihi" prefWidth="118.39996337890625" style=" -fx-font-size: 16; -fx-text-fill: #333333;" text="İlan Tarihi" />
+            <TableColumn fx:id="colIlanDurumu" prefWidth="108.0" style=" -fx-font-size: 16; -fx-text-fill: #333333;" text="İlan Durumu" />
+            <TableColumn fx:id="colKategori" prefWidth="98.39990234375" style=" -fx-font-size: 16; -fx-text-fill: #333333;" text="Kategori" />
+        </columns>
+    </TableView>
+
+    <TableView fx:id="bagisTable" layoutX="887.0" layoutY="172.0" prefHeight="216.0" prefWidth="591.0" style="-fx-background-color: #FFFFFF; -fx-border-radius: 10; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 15, 0, 0, 0); -fx-font-family: 'Roboto'; -fx-font-size: 14;">
+        <columns>
+            <TableColumn fx:id="colAliciIsim" prefWidth="133.5999755859375" style="-fx-font-size: 16; -fx-text-fill: #333333;" text="Alıcı İsim" />
+            <TableColumn fx:id="colAlimTarihi" prefWidth="117.60003662109375" style=" -fx-font-size: 16; -fx-text-fill: #333333;" text="Alım Tarihi" />
+            <TableColumn fx:id="colIslemDurumu" prefWidth="93.5999755859375" style=" -fx-font-size: 16; -fx-text-fill: #333333;" text="Durumu" />
+            <TableColumn fx:id="colAdresIcerigi" prefWidth="101.5999755859375" style="-fx-font-size: 16; -fx-text-fill: #333333;" text="Adres İçeriği" />
+            <TableColumn fx:id="colKargoFirmasiAdi" prefWidth="143.199951171875" style=" -fx-font-size: 16; -fx-text-fill: #333333;" text="Kargo Firması Adı" />
+        </columns>
+    </TableView>
+
+    <TableView fx:id="yorumTable" layoutX="887.0" layoutY="495.0" prefHeight="186.0" prefWidth="591.0" style="-fx-background-color: #FFFFFF; -fx-border-radius: 10; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 15, 0, 0, 0); -fx-font-family: 'Roboto'; -fx-font-size: 14;">
+        <columns>
+            <TableColumn fx:id="colYazanAdi" prefWidth="136.800048828125" style="-fx-font-size: 16; -fx-text-fill: #333333;" text="Yazan Adı" />
+            <TableColumn fx:id="colAlanAdi" prefWidth="137.5999755859375" style="-fx-font-size: 16; -fx-text-fill: #333333;" text="Alan Adı" />
+            <TableColumn fx:id="colYorumMetni" prefWidth="148.0001220703125" style="-fx-font-size: 16; -fx-text-fill: #333333;" text="Yorum Metni" />
+            <TableColumn fx:id="colPuan" prefWidth="45.5999755859375" style="-fx-font-size: 16; -fx-text-fill: #333333;" text="Puan" />
+            <TableColumn fx:id="colTarih" prefWidth="120.7999267578125" style="-fx-font-size: 16; -fx-text-fill: #333333;" text="Tarih" />
+        </columns>
+    </TableView>
+
+    <!-- Buttons with updated colors and alignment -->
+    <Button fx:id="exit" layoutX="1403.0" layoutY="18.0" onAction="#handleExit" prefWidth="75.0" style="-fx-background-color: #EF4444; -fx-text-fill: #FFFFFF; -fx-padding: 12 25; -fx-background-radius: 8; -fx-border-radius: 8; -fx-font-size: 14; -fx-font-weight: bold;" text="X" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Button>
+    <Button fx:id="logout" layoutX="1240.0" layoutY="18.0" onAction="#handleLogout" prefHeight="44.0" prefWidth="153.0" style="-fx-background-color: #F97316; -fx-text-fill: #FFFFFF; -fx-padding: 12 25; -fx-background-radius: 8; -fx-border-radius: 8; -fx-font-size: 14; -fx-font-weight: bold;" text="Oturumu Kapat" />
+    <Button fx:id="btnIlanEkle" layoutX="262.0" layoutY="694.0" onAction="#handleIlanEkle" style="-fx-background-color: #3B82F6; -fx-text-fill: #FFFFFF; -fx-padding: 12 25; -fx-background-radius: 8; -fx-border-radius: 8; -fx-font-size: 14; -fx-font-weight: bold;" text="İlan Ekle" />
+    <Button fx:id="btnBagisYap" layoutX="402.0" layoutY="694.0" onAction="#handleBagisYap" style="-fx-background-color: #10B981; -fx-text-fill: #FFFFFF; -fx-padding: 12 25; -fx-background-radius: 8; -fx-border-radius: 8; -fx-font-size: 14; -fx-font-weight: bold;" text="Bağış Yap" />
+    <Button fx:id="btnIlanSil" layoutX="542.0" layoutY="694.0" onAction="#handleIlanSil" style="-fx-background-color: #EF4444; -fx-text-fill: #FFFFFF; -fx-padding: 12 25; -fx-background-radius: 8; -fx-border-radius: 8; -fx-font-size: 14; -fx-font-weight: bold;" text="İlan Sil" />
+    <Button fx:id="btnBagisTamamla" layoutX="1105.0" layoutY="399.0" onAction="#handleBagisTamamla" style="-fx-background-color: #10B981; -fx-text-fill: #FFFFFF; -fx-padding: 12 25; -fx-background-radius: 8; -fx-border-radius: 8; -fx-font-size: 14; -fx-font-weight: bold;" text="Bağışı Tamamla" />
+    <Button fx:id="btnYorumEkle" layoutX="939.0" layoutY="694.0" onAction="#handleYorumEkle" style="-fx-background-color: #3B82F6; -fx-text-fill: #FFFFFF; -fx-padding: 12 25; -fx-background-radius: 8; -fx-border-radius: 8; -fx-font-size: 14; -fx-font-weight: bold;" text="Yorum Ekle" />
+    <Button fx:id="btnYorumSil" layoutX="1320.0" layoutY="694.0" onAction="#handleYorumSil" style="-fx-background-color: #EF4444; -fx-text-fill: #FFFFFF; -fx-padding: 12 25; -fx-background-radius: 8; -fx-border-radius: 8; -fx-font-size: 14; -fx-font-weight: bold;" text="Yorum Sil" />
+    <Button fx:id="btnYorumGoruntule" layoutX="1109.0" layoutY="694.0" onAction="#handleYorumGoruntule" style="-fx-background-color: #3B82F6; -fx-text-fill: #FFFFFF; -fx-padding: 12 25; -fx-background-radius: 8; -fx-border-radius: 8; -fx-font-size: 14; -fx-font-weight: bold;" text="Yorum Görüntüle" />
+
+    <Text layoutX="424.0" layoutY="159.0" style="-fx-font-family: 'Roboto'; -fx-font-size: 18; -fx-font-weight: bold; -fx-fill: #FFFFFF;" text="İlanlar">
+      <font>
+         <Font name="System Bold" size="25.0" />
+      </font></Text>
+    <Text layoutX="1153.0" layoutY="483.0" style="-fx-font-family: 'Roboto'; -fx-font-size: 18; -fx-font-weight: bold; -fx-fill: #FFFFFF;" text="Yorumlar" />
+    <Text layoutX="1149.0" layoutY="159.0" style="-fx-font-family: 'Roboto'; -fx-font-size: 18; -fx-font-weight: bold; -fx-fill: #FFFFFF;" text="Bağışlar" />
+    <Text layoutX="587.0" layoutY="36.0" style="-fx-font-family: 'Roboto'; -fx-font-size: 24; -fx-font-weight: bold; -fx-fill: #FFFFFF;" text="SOSYAL YARDIMLAŞMA PLATFORMU">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Text>
+
+</Pane>

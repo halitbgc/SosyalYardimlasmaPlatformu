@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane prefHeight="324.0" prefWidth="327.0" style="-fx-background-color: linear-gradient(to bottom, #4facfe, #00f2fe);  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 15, 0, 0, 0);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vtys_java23.AddIlanController">
+    <!-- Başlık -->
+    <Label layoutX="104.0" layoutY="14.0" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #FFFFFF;" text="Yeni İlan Ekle" />
+
+    <!-- Başlık Girişi -->
+    <TextField fx:id="txtBaslik" layoutX="74.0" layoutY="49.0" promptText="Başlık" style="-fx-background-color: #FFFFFF; -fx-background-radius: 8; -fx-padding: 10; -fx-font-size: 14;" />
+
+    <!-- Açıklama Girişi -->
+    <TextField fx:id="txtAciklama" layoutX="74.0" layoutY="95.0" promptText="Açıklama" style="-fx-background-color: #FFFFFF; -fx-background-radius: 8; -fx-padding: 10; -fx-font-size: 14;" />
+
+    <!-- Ürün Durumu Girişi -->
+    <TextField fx:id="txtUrunDurumu" layoutX="75.0" layoutY="142.0" promptText="Ürün Durumu" style="-fx-background-color: #FFFFFF; -fx-background-radius: 8; -fx-padding: 10; -fx-font-size: 14;" />
+
+    <!-- Kategori Seçimi -->
+    <ComboBox fx:id="comboKategori" layoutX="86.0" layoutY="196.0" prefHeight="40.0" prefWidth="147.0" promptText="Kategori Seç" style="-fx-background-color: #FFFFFF; -fx-background-radius: 8; -fx-padding: 10; -fx-font-size: 14;" />
+
+    <!-- Butonlar -->
+    <HBox alignment="CENTER" layoutX="74.0" layoutY="220.0" spacing="10" />
+     <Button fx:id="btnIlanEkle" layoutX="74.0" layoutY="266.0" onAction="#handleIlanEkle" style="-fx-background-color: #3B82F6; -fx-text-fill: #FFFFFF; -fx-font-size: 14; -fx-font-weight: bold; -fx-padding: 8 15; -fx-background-radius: 8;" text="İlan Ekle" />
+     <Button fx:id="btnGeri" layoutX="182.0" layoutY="266.0" onAction="#handleGeri" style="-fx-background-color: #EF4444; -fx-text-fill: #FFFFFF; -fx-font-size: 14; -fx-font-weight: bold; -fx-padding: 8 15; -fx-background-radius: 8;" text="Geri" />
+</Pane>
